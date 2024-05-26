@@ -5,7 +5,7 @@
         <div class="container">
             <div class="light-font">
                 <ol class="breadcrumb primary-color mb-0">
-                    <li class="breadcrumb-item"><a class="white-text" href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a class="white-text" href="{{ route('front.home') }}">Home</a></li>
                     <li class="breadcrumb-item active">Shop</li>
                 </ol>
             </div>
@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-3 sidebar">
                     <div class="sub-title">
-                        <h2>Categories</h3>
+                        <h2>Kategori</h3>
                     </div>
 
                     <div class="card">
@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="sub-title mt-5">
-                        <h2>Price</h3>
+                        <h2>Harga</h3>
                     </div>
 
                     <div class="card">
@@ -156,7 +156,8 @@
 
 
                         <div class="col-md-12 pt-5">
-                            <nav aria-label="Page navigation example">
+                            {{ $products->withQueryString()->links() }}
+                            {{-- <nav aria-label="Page navigation example">
                                 <ul class="pagination justify-content-end">
                                     <li class="page-item disabled">
                                         <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -168,7 +169,7 @@
                                         <a class="page-link" href="#">Next</a>
                                     </li>
                                 </ul>
-                            </nav>
+                            </nav> --}}
                         </div>
                     </div>
                 </div>
